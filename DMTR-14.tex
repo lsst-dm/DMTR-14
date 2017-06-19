@@ -1,0 +1,225 @@
+\section{Characterization Metric Report: Science Pipelines Version
+12.0}\label{characterization-metric-report-science-pipelines-version-12.0}
+
+\subsection{Photometric Repeatability
+Measurements}\label{photometric-repeatability-measurements}
+
+\emph{Submitted by Jim Bosch}
+
+This dataset is a selection of \emph{i}-band HyperSuprime-Cam
+engineering data taken in the SDSS Stripe 82 region. This dataset
+consists of 30s exposures, so it is somewhat similar to projected LSST
+data in depth. Our current calibration approach has many limitations
+relative to what we ultimately plan to implement for LSST:
+
+\begin{itemize}
+\tightlist
+\item
+  There's currently no relative calibration being run at all.
+\item
+  We have only limited correction for chromatic effects.
+\item
+  There's currently no allowance for zeropoint variations smaller than
+  the scale of a CCD.
+\item
+  We also use a much simpler sample selection than that proposed by the
+  SRD.
+\end{itemize}
+
+A Jupyter notebook to compute the metrics can be found at
+\url{https://github.com/lsst/afw/blob/tickets/DM-3896/examples/repeatability.ipynb}.
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.25\columnwidth}\raggedright\strut
+Metric Characterized\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
+Metric Ref\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+Target\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
+Measured Value\strut
+\end{minipage} & \begin{minipage}[b]{0.19\columnwidth}\raggedright\strut
+Measurement Method\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+Photometric repeatability (procCalRep)\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browser/DLP-307}{DLP-307}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\(\leq 13\) mmag\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+10.6 mmag\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3338}{DM-3338} (i band)\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+Photometric repeatability (PA1gri)\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browser/DLP-315}{DLP-315}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\(\leq 13\) mmag\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+10.6 mmag\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3338}{DM-3338}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.25\columnwidth}\raggedright\strut
+Photometric repeatability (PA1uzy)\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browser/DLP-316}{DLP-316}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\(\leq 13\) mmag\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+10.6 mmag\strut
+\end{minipage} & \begin{minipage}[t]{0.19\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3338}{DM-3338} (i band)\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Algorithmic Performance
+Measurements}\label{algorithmic-performance-measurements}
+
+\emph{Submitted by John Swinbank}
+
+The \emph{i}-band HSC engineering data (described above) was used where
+possible and the same caveats apply. Consult the tickets in the
+Measurement Method column for more details.
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.30\columnwidth}\raggedright\strut
+Metric Characterized\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright\strut
+Metric Ref\strut
+\end{minipage} & \begin{minipage}[b]{0.20\columnwidth}\raggedright\strut
+Target\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
+Measured Value\strut
+\end{minipage} & \begin{minipage}[b]{0.09\columnwidth}\raggedright\strut
+Measurement\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.30\columnwidth}\raggedright\strut
+Residual PSF Ellipticity Correlations (TE1)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DLP-290}{DLP-290}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\(\leq 5\times 10^{-3}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+\(6\times 10^{-5}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3040}{DM-3040}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright\strut
+Residual PSF Ellipticity Correlations (TE2)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DLP-290}{DLP-290}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\(\leq 5\times 10^{-3}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+\(2\times 10^{-5}\)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3047}{DM-3047}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright\strut
+Relative Astrometry (AM1)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DLP-310}{DLP-310}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\(< 60\) mas\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+12.49 mas\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3057}{DM-3057}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.30\columnwidth}\raggedright\strut
+Relative Astrometry (AM2)\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DLP-311}{DLP-311}\strut
+\end{minipage} & \begin{minipage}[t]{0.20\columnwidth}\raggedright\strut
+\(< 60\) mas\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+12.19 mas\strut
+\end{minipage} & \begin{minipage}[t]{0.09\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3064}{DM-3064}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\subsection{Summary of Computational Performance
+Measurements}\label{summary-of-computational-performance-measurements}
+
+\emph{Submitted by John Swinbank and Simon Krughoff}
+
+At this point of Construction, the computational performance
+measurements are a combination of precursor data processing and
+extrapolation from R\&D assumptions.
+
+DECam/HITS data was used for the OTT1 estimate and for the diffim and
+single-frame measurement of the Alert Production Computational Budget in
+combination with data from the
+\href{https://dev.lsstcorp.org/trac/wiki/DC3bPT1_1}{3rd Data Challenge}.
+
+For the Data Release Production of the computational budget, we used
+DECam/HITS data for estimating diffim performance, HSC-I for assembling
+and measuring coadds and for forced measurement, estimates from FDR for
+multifit, and data from the 3rd Data Challenge for SDQA. Calculations
+for the DRP computational budget used
+\href{https://github.com/lsst-dm/kpm/blob/29c053f7b832e8bd999527e012681826fc0c201c/DLP-314:\%20DRP\%20Computational\%20Budget/LSST\%20DRP\%20Computational\%20Budget.ipynb}{this
+iPython notebook}.
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+\begin{minipage}[b]{0.22\columnwidth}\raggedright\strut
+Metric Characterized\strut
+\end{minipage} & \begin{minipage}[b]{0.11\columnwidth}\raggedright\strut
+Metric Ref\strut
+\end{minipage} & \begin{minipage}[b]{0.21\columnwidth}\raggedright\strut
+Target\strut
+\end{minipage} & \begin{minipage}[b]{0.14\columnwidth}\raggedright\strut
+Measured Value\strut
+\end{minipage} & \begin{minipage}[b]{0.17\columnwidth}\raggedright\strut
+Measurement Method\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+OTT1\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DLP-328}{DLP-328}\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright\strut
+\(\leq 240\) sec\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+200-250 sec\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3724}{DM-3724}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+AP Computational Budget\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DLP-329}{DLP-329}\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright\strut
+\(\leq 231\) TFLOPS\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+34-39 TFLOPS\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3267}{DM-3267}\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.22\columnwidth}\raggedright\strut
+DRP Computational Budget\strut
+\end{minipage} & \begin{minipage}[t]{0.11\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DLP-314}{DLP-314}\strut
+\end{minipage} & \begin{minipage}[t]{0.21\columnwidth}\raggedright\strut
+\(\leq 645\) TFLOPS\strut
+\end{minipage} & \begin{minipage}[t]{0.14\columnwidth}\raggedright\strut
+318 TFLOPS\strut
+\end{minipage} & \begin{minipage}[t]{0.17\columnwidth}\raggedright\strut
+\href{https://jira.lsstcorp.org/browse/DM-3083}{DM-3083}\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
